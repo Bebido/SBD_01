@@ -1,6 +1,6 @@
 #include <iostream>
-using namespace std;
-void wybor();
+using namespace std;            // http://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice
+void wybor();                   // wrzuc od razu do osobnego pliku - im na mniej kodu sie patrzy na raz, tym lepiej
 
 int main()
 {
@@ -12,7 +12,7 @@ void wybor()
 {
 	char wybor;
 	cout << "Wybierz metoda wprowadzania:\n m - manualnie\n l - losowo\n f - z pliku\n";
-	wybor = getchar();
+	wybor = getchar();          // ta funkcja jest z <cstdio>, a nie masz tego zaincludowanego - to ze dziala to tylko dobra wola visuala
 
 	switch (wybor)
 	{
@@ -26,7 +26,7 @@ void wybor()
 		cout << "plik\n";
 		break;
 	default:
-		cout << "nada\n";
+		cout << "nada\n";       // na bank tego zapomnisz zmienic przed oddaniem
 		break;
 	}
 }
